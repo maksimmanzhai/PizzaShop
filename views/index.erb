@@ -3,6 +3,7 @@
 <div class="row">
 	<% @products.each do |p| %>
 	<div class="col-md-3">
+
 		<div>
 			<%= p.title %>
 		</div>
@@ -16,12 +17,17 @@
 		</div>
 		
 		<div>
-			Price: <%= p.price %>
+			Price: <%= p.price %> rub.
 		</div>
 		
 		<div>
-			Size: <%= p.size %>
+			Size: <%= p.size %> cm.
 		</div>
+
+		<div>
+			<button type="button" class="btn btn-success">Add to cart</button>
+		</div>
+
 
 	</div>
 	<% end %>
