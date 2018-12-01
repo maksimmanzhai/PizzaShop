@@ -13,3 +13,14 @@ function add_to_cart(id)
 	x = x * 1 + 1;
 	window.localStorage.setItem(key, x);
 }
+
+function view_list_of_items() 
+{
+	var text = " ";
+	var i;
+	for (var i = 0, len = localStorage.length; i < len; i++)
+	{
+		text = text + localStorage.key(i) + " => " + localStorage.getItem(localStorage.key(i)) + "; ";
+	}
+	alert(text);
+}
