@@ -11,8 +11,7 @@ class AddProducts < ActiveRecord::Migration[5.2]
 			:is_best_offer => false, 
 			:path_to_image => '/images/1.jpg'
 		})
-		
-		
+
 		Product.create ({
 			:title => 'Pepperoni', 
 			:description => 'This is pizza with meat', 
@@ -23,7 +22,6 @@ class AddProducts < ActiveRecord::Migration[5.2]
 			:is_best_offer => true, 
 			:path_to_image => '/images/2.jpg'
 		})
-		
 
 		Product.create ({
 			:title => 'Vegeterian', 
@@ -36,6 +34,6 @@ class AddProducts < ActiveRecord::Migration[5.2]
 			:path_to_image => '/images/3.jpg'
 		})
 
-  end
+	end
 
 end

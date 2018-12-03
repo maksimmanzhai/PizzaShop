@@ -16,11 +16,25 @@ function add_to_cart(id)
 
 function view_list_of_items() 
 {
-	var text = " ";
-	var i;
-	for (var i = 0, len = localStorage.length; i < len; i++)
+	// var text = "";
+	// var i;
+	// for (var i = 0, len = localStorage.length; i < len; i++)
+	// {
+	// 	text = text + localStorage.key(i) + " => " + localStorage.getItem(localStorage.key(i)) + "; ";
+	// }
+	// alert(text);
+	var cnt = 0;
+
+	for (var i = 0; i < window.localStorage.length; i++) 
 	{
-		text = text + localStorage.key(i) + " => " + localStorage.getItem(localStorage.key(i)) + "; ";
+		var key = window.localStorage.key(i); // getting key
+		var value = window.localStorage.getItem(key); // getting value, analog from ruby hh[key] = x
+
+		if (key.indexOf('product_') == 0)
+		{
+			cnt = cnt + value * 1;
+		}
+
 	}
-	alert(text);
+	return cnt;
 }
