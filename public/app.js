@@ -13,7 +13,7 @@ function add_to_cart(id)
 	x = x * 1 + 1;
 	window.localStorage.setItem(key, x);
 
-	alert('Items in your cart: ' + view_list_of_items());
+	// alert('Items in your cart: ' + view_list_of_items());
 }
 
 function view_list_of_items() 
