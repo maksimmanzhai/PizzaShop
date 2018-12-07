@@ -25,3 +25,7 @@ function view_list_of_items()
 	alert(text);
 	
 }
+
+function function_name(argument) {
+	// body...
+}
