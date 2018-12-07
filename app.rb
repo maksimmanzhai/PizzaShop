@@ -32,7 +32,7 @@ end
 post '/cart' do
 	@c = Order.new params[:order]
 	if @c.save
-		erb "Спасибо за ваш заказ"
+		erb "Спасибо за ваш заказ!"
 	else
 		@error = @c.errors.full_messages.first
 		erb :cart
