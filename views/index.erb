@@ -1,47 +1,37 @@
 <h2>Welcome to Pizza shop!</h2>
 
 <div class="row">
-	<% @products.each do |p| %>
-	<div class="col-md-3">
+  <% @products.each do |p| %>
+  <div class="col-md-3">
 
-		<div>
-			<h3>
-				<%= p.title %>	
-			</h3>
-		</div>
+    <div>
+      <h3>
+        <%= p.title %>	
+      </h3>
+    </div>
+    <div>
+      <img src="<%= p.path_to_image %>" height="150" width="(150/10)*16" />
+    </div>
+    <div>
+      <%= p.description %>
+    </div>
+    <div>
+      Price: <%= p.price %> rub.
+    </div>
 		
-		<div>
-			<img src="<%= p.path_to_image %>" height="150" width="(150/10)*16">
-		</div>
-		
-		<div>
-			<%= p.description %>
-		</div>
-		
-		<div>
-			Price: <%= p.price %> rub.
-		</div>
-		
-		<div>
-			Size: <%= p.size %> cm.
-		</div>
+    <div>
+      Size: <%= p.size %> cm.
+    </div>
 
-		<div>
-			<button type="button" class="btn btn-success" onclick="add_to_cart(<%= p.id %>)">Add to cart</button>
-		</div>
+    <div>
+      <button type="button" class="btn btn-success" onclick="add_to_cart(<%= p.id %>)">Add to cart</button>
+    </div>
 
-	</div>
-	<% end %>
+  </div>
+  <% end %>
 </div>
 </br>
 </br>
 
 <button class="btn btn-primary" onclick="cart_get_number_of_items()">View all items</button>
 
-<script type="text/javascript">
-	$(function() 
-	{
-		update_orders_input();
-		update_orders_button();
-	});
-</script>
