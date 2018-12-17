@@ -11,13 +11,13 @@ function add_to_cart(id)
 
 function cart_get_number_of_items() 
 {
-<<<<<<< HEAD
+
 	var text = "";
 	var i;
 	for (var i = 0, len = localStorage.length; i < len; i++)
 	{
 		text = text + localStorage.key(i) + " => " + localStorage.getItem(localStorage.key(i)) + "; ";
-=======
+
 	var cnt = 0;
 
 	for (var i = 0; i < window.localStorage.length; i++) 
@@ -28,7 +28,7 @@ function cart_get_number_of_items()
 		{
 			cnt = cnt + value * 1;
 		}
->>>>>>> ver_from_ro
+
 	}
 	alert(text);
 	
