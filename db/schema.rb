@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_185119) do
+ActiveRecord::Schema.define(version: 2018_12_07_185108) do
+
+  create_table "orders", force: :cascade do |t|
+    t.text "name"
+    t.text "phone"
+    t.text "list"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string "title"
