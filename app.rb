@@ -30,7 +30,7 @@ get '/contacts' do
 end
 
 post '/cart' do
-  @orders_input = params[:orderstring]
+  @orders_input = params[:orders]
   @items = parse_orders_input @orders_input
 
   # выводим сообщение о том, что корзина пуста
@@ -52,14 +52,8 @@ get '/admin' do
 end
 
 post '/place_order' do
-  @shipment = Shipment.new params[:order]
-
-  if @shipment.save
-    erb :order_placed
-  else
-    @error = @shipment.errors.full_messages.first
-    erb "Error"
-  end
+  @order = Order.create params[:order]
+  erb :order_placed
 end
 
 def parse_orders_input orders_input
