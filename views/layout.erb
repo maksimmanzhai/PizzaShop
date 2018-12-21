@@ -34,14 +34,14 @@
 			  </div>
 			  <div class="navbar-collapse collapse">
 			    <ul class="nav navbar-nav">
-			      <li><a href="/about">About</a></li>
-			      <li><a href="/contacts">Contacts</a></li>
+			      <li><a href="/#">About</a></li>
+			      <li><a href="/#">Contacts</a></li>
 			    </ul>
 			    <ul class="nav navbar-nav navbar-right">
 			      <li>
 			      	<form action="/cart" method="post">
-				    <input id="orders_input" name="orderstring" type="hidden" />
-			      	<input id="orders_button" type="submit" />
+				    		<input id="orders_input" name="orders_input" type="hidden" />
+			      		<input id="orders_button" type="submit" />
 			      	</form>
 			      </li>
 			    </ul>
@@ -49,10 +49,10 @@
 			</nav>
 
 			<div>
-			      <%if @error && @error.length > 0 then %>
-			          <div class="alert alert-danger"><%=@error%></div>
-			      <% end %>
-			      <%= yield %>
+				<%if @error && @error.length > 0 then %>
+				<div class="alert alert-danger"><%=@error%></div>
+				<% end %>
+				<%= yield %>
 			</div>
 
 	</div>
