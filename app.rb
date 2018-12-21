@@ -34,9 +34,9 @@ post '/cart' do
   @items = parse_orders_input @orders_input
 
   # выводим сообщение о том, что корзина пуста
-  # if @items.length == 0
-  #   return erb :cart_is_empty
-  # end
+  if @items.length == 0
+    return erb :cart_is_empty
+  end
 
   @items.each do |item|
     # id, cnt
